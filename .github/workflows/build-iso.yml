@@ -54,6 +54,7 @@ jobs:
           sudo apt update -y
           sudo apt install -y \
             podman
+          sudo cp -v /run/containers/0/auth.json /etc/ostree/auth.json
 
       - name: Maximize build space
         if: inputs.platform != 'arm64'
